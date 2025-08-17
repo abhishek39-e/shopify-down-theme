@@ -1051,7 +1051,7 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
     });
@@ -1330,3 +1330,15 @@ class CartPerformance {
     );
   }
 }
+document.querySelectorAll('.unique').forEach((btn) => {
+  console.log(btn);
+
+  btn.addEventListener('mouseover', () => {
+    console.log('200');
+
+  })
+  btn.addEventListener('click', () => {
+    console.log('200');
+
+  })
+})

@@ -160,7 +160,7 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <div class="card-information">
+          <div class="card-information djlkf">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -568,6 +568,8 @@
       </div>
     </div>
   </div>
+          {%  render 'add-to-cart'  %}
+
 {%- else -%}
   {%- liquid
     assign ratio = 1

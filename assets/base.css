@@ -3687,3 +3687,10 @@ details-disclosure > details {
 a.button {
   color: rebeccapurple !important;
 }
+button.unique {
+  position: absolute;
+  bottom: 0;
+}
+.card-wrapper.product-card-wrapper.underline-links-hover {
+  position: relative;
+}
