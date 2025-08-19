@@ -42,7 +42,7 @@ function attachCartForms() {
     });
 }
 
-// class CustomCart extends HTMLElement {
+class CustomCart extends HTMLElement {
 //     constructor() {
 //         super();
 //     }
