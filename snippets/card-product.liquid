@@ -565,10 +565,13 @@
             </span>
           {%- endif -%}
         </div>
+        
       </div>
+      
     </div>
+      
   </div>
-          {%  render 'add-to-cart '  %}
+        {%  render 'add-to-cart', product: card_product %}  
 
 {%- else -%}
   {%- liquid

@@ -1330,15 +1330,3 @@ class CartPerformance {
     );
   }
 }
-document.querySelectorAll('.unique').forEach((btn) => {
-  console.log(btn);
-
-  btn.addEventListener('mouseover', () => {
-    console.log('200');
-
-  })
-  btn.addEventListener('click', () => {
-    console.log('200');
-
-  })
-})

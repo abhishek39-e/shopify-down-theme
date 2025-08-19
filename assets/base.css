@@ -3684,7 +3684,7 @@ details-disclosure > details {
   }
 }
 
-a.button {
+/* a.button {
   color: rebeccapurple !important;
 }
 button.unique {
@@ -3693,4 +3693,9 @@ button.unique {
 }
 .card-wrapper.product-card-wrapper.underline-links-hover {
   position: relative;
+} */
+button.unique {
+  position: absolute;
+  bottom: 15px;
+  z-index: 9999;
 }

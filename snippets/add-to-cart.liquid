@@ -1,11 +1,5 @@
-<form>
-  <button type="button" class="unique">Add to cart</button>
-</form>
-
-<script>
-  let button = document.querySelector('.unique');
-
-  button.addEventListener('click', (e) => {
-    console.log("Button clicked, no redirect 🚀");
-  });
-</script>
+{%  form  "product", product %}  
+<input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}" />
+  <input type="hidden" name="quantity" value="1" />
+  <button type="submit" class="unique button">Add to cart</button>
+{% endform %}

@@ -302,7 +302,7 @@
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
-
+    {% render 'slide-drawer' %}
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
@@ -372,5 +372,37 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+//    let submits = document.querySelectorAll(
+//   'form[action^="/cart/add"] button[type="submit"], form[action^="/cart/add"] input[type="submit"]'
+// );
+
+// // har submit button pe event listener lagao
+// submits.forEach(btn => {
+//   btn.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+//     console.log('200 (button click)');
+
+//     const cartDrawer = document.querySelector('customcart-drawer');
+//     cartDrawer.classList.add('show');
+//   });
+// });
+//------------------------
+  //   document.querySelectorAll('form[action^="/cart/add"]').forEach(form =>{
+  //     form.addEventListener('submit', (e)=>{
+  //       e.preventDefault()
+        
+  //   const cartDrawer = document.querySelector('customcart-drawer');
+  //   if (cartDrawer) {
+  //     cartDrawer.classList.add('show');
+  // }
+  //     })
+      
+  //   })
+  //=----------------------------
+  // page load hone ke baad run karna best hai
+
+
+    </script>
   </body>
 </html>

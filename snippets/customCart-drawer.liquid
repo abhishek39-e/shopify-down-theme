@@ -1,0 +1,52 @@
+{{ 'drawerCart.css' | asset_url | stylesheet_tag }}
+<script src="{{'customCart-drawer.js' |  asset_url  }}" defer="defer" ></script>
+<customCart-drawer>
+    <div class="mail_cart">
+        <close-cart class="cut-btn">
+            remove
+        </close-cart>
+        <h1>
+            Custom Cart
+        </h1>
+
+        <cart-item>
+            
+            
+            {% comment %} <form action="{{routes.cart_url}}"> {% endcomment %}
+             {% form "cart", cart  %} 
+{%if cart.empty %}
+                continue shopping
+                {% else %}
+            {% for item in cart.items %}
+                <div>
+                    <img src="{{item.image | img_url: 200x}}" alt="{{item.title}}">
+                    <p>
+                        {{item.product.title}}
+                    </p>
+                    <p>
+                       {{item.product.price |  money}} 
+                    </p>
+                    {% comment %} <p>
+                        {{item.options_with_values[0].name}} : {{item.options_with_values[0].value}}
+                    </p> {% endcomment %}
+                    <P>
+                        {{item.variant.title}}
+                    </P>
+                    <a href="{{item.url_to_remove}}">remove</a>
+                    <input name="quantity" value="{{item.quantity}}">
+                </div>
+            {% endfor %}
+
+            <p>
+                {{cart.total_discount |  money }}
+            </p>
+            <p>
+                {{cart.total_price |  money}}
+            </p>
+            {% endif %}
+            <button type="submit"  name="checkout"> checkout</button>
+             {% endform %}
+            {% comment %} </form> {% endcomment %}
+        </cart-item>
+    </div>
+</customCart-drawer>
