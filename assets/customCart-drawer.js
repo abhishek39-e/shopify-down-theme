@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function attachCartForms() {
-    document.querySelectorAll('form[action^="/cart/add"]').forEach(form => {
+    document.querySelectorAll('form[action^="/cart/add"] input[type="submit"], form[action^="/cart/add"] buttn[type="submit"]').forEach(form => {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
