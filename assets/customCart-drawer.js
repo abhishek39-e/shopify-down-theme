@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function attachCartForms() {
-    // ✅ Select the form itself
+
     document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -41,7 +41,6 @@ function attachCartForms() {
                 cartDrawer.classList.add("show");
             }
 
-            // ✅ Pass the form element correctly
             fetch("/cart/add.js", {
                 method: "POST",
                 body: new FormData(form)
@@ -49,7 +48,7 @@ function attachCartForms() {
                 .then(res => res.json())
                 .then(data => {
                     console.log("Added to cart:", data);
-                    // Update your cart drawer here if needed
+
                 })
                 .catch(err => console.error("Error adding to cart:", err));
         });
