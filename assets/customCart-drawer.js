@@ -22,25 +22,68 @@ document.addEventListener("DOMContentLoaded", () => {
     attachCartForms();
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    attachCartForms();
+});
+
 function attachCartForms() {
-    document.querySelectorAll('form[action^="/cart/add"] input[type="submit"], form[action^="/cart/add"] buttn[type="submit"]').forEach(form => {
-        form.addEventListener('submit', async (e) => {
+    // ✅ Select the form itself
+    document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
+        form.addEventListener("submit", (e) => {
             e.preventDefault();
+            e.stopPropagation();
 
-            console.log("200 (form submit intercepted)");
+            console.log("200");
 
-            const cartDrawer = document.querySelector('customcart-drawer');
+            const cartDrawer = document.querySelector("customcart-drawer");
             if (cartDrawer) {
-                cartDrawer.classList.add('show');
+                cartDrawer.classList.add("show");
             }
-            await fetch('/cart/add', {
-                method: 'post',
+
+            // ✅ Pass the form element correctly
+            fetch("/cart/add.js", {
+                method: "POST",
                 body: new FormData(form)
             })
-
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Added to cart:", data);
+                    // Update your cart drawer here if needed
+                })
+                .catch(err => console.error("Error adding to cart:", err));
         });
     });
 }
+
+
+// function attachCartForms() {
+//     document.querySelectorAll('form[action="/cart/add"] input[type="submit"], form[action="/cart/add"] button[type="submit"]').forEach(form => {
+//         form.addEventListener('click', (e) => {
+//             e.preventDefault();
+//             e.stopPropagation()
+
+//             console.log("200 ");
+
+//             const cartDrawer = document.querySelector('customcart-drawer');
+//             if (cartDrawer) {
+//                 cartDrawer.classList.add('show');
+//             }
+//             fetch("/cart/add.js", {
+//                 method: "POST",
+//                 body: new FormData(form),
+//             })
+//                 .then(res => res.json())
+//                 .then(data => {
+//                     console.log("Added to cart:", data);
+//                     // here you could update cart drawer content
+//                 })
+//                 .catch(err => console.error("Error adding to cart:", err));
+//             console.log(x)
+
+//         });
+//     });
+// }
 
 // class CustomCart extends HTMLElement {
 //     constructor() {
