@@ -3,7 +3,7 @@ customCart-drawer {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 98vh;
   width: 35vw;
   max-width: 480px;
   background-color: #fff;
@@ -133,3 +133,13 @@ button[name='checkout'] {
 button[name='checkout']:hover {
   background: #333;
 }
+customcart-drawer.show {
+  border-radius: 21px 0 0 21px;
+  margin: 6px 0;
+  box-shadow: 1px 1px 12px #000;
+}
+.store_item {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+efdf

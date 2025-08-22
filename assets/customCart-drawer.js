@@ -47,6 +47,7 @@ function attachCartForms() {
             })
                 .then(res => res.json())
                 .then(data => {
+                    // document.querySelector('.cart_item').innerHTML = data
                     console.log("Added to cart:", data);
 
                 })

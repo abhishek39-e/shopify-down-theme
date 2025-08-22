@@ -9,7 +9,7 @@
             Custom Cart
         </h1>
 
-        <cart-item>
+        <cart-item class="cart_item">
             
             
             {% comment %} <form action="{{routes.cart_url}}"> {% endcomment %}
@@ -18,7 +18,7 @@
                 continue shopping
                 {% else %}
             {% for item in cart.items %}
-                <div>
+                <div class="store_item">
                     <img src="{{item.image | img_url: 200x}}" alt="{{item.title}}">
                     <p>
                         {{item.product.title}}
