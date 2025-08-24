@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     openCart.addEventListener('click', function (e) {
         e.preventDefault();
         cartDrawer.classList.add('show')
-        console.log('200');
+        console.log('200 ok');
     });
 
     let remove = document.querySelector('.cut-btn')
