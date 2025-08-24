@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const openCart = document.querySelector('#cart-icon-bubble');
     const cartDrawer = document.querySelector('customcart-drawer');
 
-    openCart.addEventListener('click', function (e) {
-        e.preventDefault();
+    openCart.addEventListener('click', function (evt) {
+        evt.preventDefault();
         cartDrawer.classList.add('show')
-        console.log('200 ');
+        console.log('200');
     });
 
     let remove = document.querySelector('.cut-btn')
