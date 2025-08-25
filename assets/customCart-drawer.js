@@ -25,6 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     attachCartForms();
 });
+//update cart 
+async function updateCart() {
+    let res = await fetch("/?section_id=custom-cart")
+    let text = await res.text()
+    console.log(text)
+
+}
 
 function attachCartForms() {
 
@@ -51,6 +58,7 @@ function attachCartForms() {
 
                 })
                 .catch(err => console.error("Error adding to cart:", err));
+            updateCart()
         });
     });
 }
