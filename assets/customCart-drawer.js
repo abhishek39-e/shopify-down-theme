@@ -5,14 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     openCart.addEventListener('click', function (evt) {
         evt.preventDefault();
         cartDrawer.classList.add('show')
-        console.log('200');
     });
 
     let remove = document.querySelector('.cut-btn')
     remove.addEventListener('click', function (e) {
         e.preventDefault();
         cartDrawer.classList.remove('show')
-        console.log('200');
+
     });
 
 
