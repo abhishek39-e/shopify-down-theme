@@ -8,6 +8,7 @@ class CartDrawer extends HTMLElement {
   }
   //d
   //hek
+  //here
 
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelector('#cart-icon-bubble');
