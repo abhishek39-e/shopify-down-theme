@@ -6,10 +6,7 @@ class CartDrawer extends HTMLElement {
     this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
     this.setHeaderCartIconAccessibility();
   }
-  //d
-  //hek
-  //here
-  //dgfdg
+  //com blow  
 
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelector('#cart-icon-bubble');
