@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         evt.preventDefault();
         cartDrawer.classList.add('show')
     });
+
     let remove = document.querySelector('.cut-btn')
     remove.addEventListener('click', function (e) {
         e.preventDefault();
