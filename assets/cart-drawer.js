@@ -132,5 +132,5 @@ class CartDrawerItems extends CartItems {
     ];
   }
 }
-// classes concept  default cart prevent
+// classes concept default cart prevent
 customElements.define('cart-drawer-items', CartDrawerItems);
