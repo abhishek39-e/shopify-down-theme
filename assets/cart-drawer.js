@@ -69,7 +69,7 @@ class CartDrawer extends HTMLElement {
 
     cartDrawerNote.parentElement.addEventListener('keyup', onKeyUpEscape);
   }
-
+  // 
   renderContents(parsedState) {
     this.querySelector('.drawer__inner').classList.contains('is-empty') &&
       this.querySelector('.drawer__inner').classList.remove('is-empty');
