@@ -132,5 +132,5 @@ class CartDrawerItems extends CartItems {
     ];
   }
 }
-
+// classes concept
 customElements.define('cart-drawer-items', CartDrawerItems);
