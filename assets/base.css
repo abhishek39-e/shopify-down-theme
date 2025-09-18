@@ -23,6 +23,7 @@
   --text-alignment: var(--product-card-text-alignment);
 }
 
+
 .collection-card-wrapper .card,
 .contains-card--collection {
   --border-radius: var(--collection-card-corner-radius);
