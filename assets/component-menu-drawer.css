@@ -2,8 +2,6 @@
   position: initial;
 }
 
-
-
 .js menu-drawer > details > summary::before,
 .js menu-drawer > details[open]:not(.menu-opening) > summary::before {
   content: '';
